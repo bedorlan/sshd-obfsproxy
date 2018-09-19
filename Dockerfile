@@ -6,7 +6,6 @@ RUN pip install --no-cache-dir obfsproxy
 
 RUN ssh-keygen -A
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
-RUN echo "root:root" | chpasswd
 
 EXPOSE 443
 COPY start.sh .
